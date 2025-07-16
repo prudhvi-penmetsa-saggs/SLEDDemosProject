@@ -7,15 +7,35 @@ packages:
   gitUrl: https://github.com/prudhvi-penmetsa-saggs
   gitUsername: prudhvi-penmetsa-saggs
   gitBranch: main
+- name: WmJDBCAdapter
+  version: 10.3.0.0.34
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: licensed
 services:
+- serviceName: project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_TaxDB
+  packages:
+  - name: SLEDDemosProject
+    version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:getTaxRate
   packages:
   - name: SLEDDemosProject
     version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: project.sleddemos.integrations:calculateSalesTax
   packages:
   - name: SLEDDemosProject
     version: "1.0"
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 - serviceName: pub.math:multiplyFloats
   packages:
   - name: WmPublic
@@ -28,3 +48,50 @@ services:
   packages:
   - name: WmPublic
     version: 11.1.0.0.2064
+configurationVariables:
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.expireTimeout
+  : "1000"
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.portNumber
+  : "3306"
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.user
+  : wmuser
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.heartBeatInterval
+  : "0"
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.startupRetryCount
+  : "0"
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.otherProperties
+  : loginTimeout=60;
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.password
+  : "{AES}NhfBA+N8zoZHccGe72AxsA=="
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.driverType
+  : MYSQL_DB
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.maximumPoolSize
+  : "10"
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.poolIncrementSize
+  : "1"
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.minimumPoolSize
+  : "1"
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.networkProtocol
+  : ""
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.databaseName
+  : demodata
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.dbType
+  : MySQL
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.serverName
+  : ec2-107-22-86-181.compute-1.amazonaws.com
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.transactionType
+  : NO_TRANSACTION
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.trustStore
+  : ""
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.startupBackoffSecs
+  : "10"
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionEnabled
+  : "false"
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.blockingTimeout
+  : "1000"
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.datasourceClass
+  : com.mysql.cj.jdbc.MysqlDataSource
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.poolable
+  : "false"
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.keyStore
+  : ""
