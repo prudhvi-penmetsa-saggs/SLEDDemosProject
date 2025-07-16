@@ -7,3 +7,24 @@ packages:
   gitUrl: https://github.com/prudhvi-penmetsa-saggs
   gitUsername: prudhvi-penmetsa-saggs
   gitBranch: main
+services:
+- serviceName: project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:getTaxRate
+  packages:
+  - name: SLEDDemosProject
+    version: "1.0"
+- serviceName: project.sleddemos.integrations:calculateSalesTax
+  packages:
+  - name: SLEDDemosProject
+    version: "1.0"
+- serviceName: pub.math:multiplyFloats
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2064
+- serviceName: pub.math:divideFloats
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2064
+- serviceName: pub.math:addInts
+  packages:
+  - name: WmPublic
+    version: 11.1.0.0.2064
