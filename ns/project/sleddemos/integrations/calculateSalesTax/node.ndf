@@ -147,8 +147,8 @@
   <value name="retry_max">0</value>
   <value name="retry_interval">0</value>
   <record name="node_hints" javaclass="com.wm.util.Values">
-    <value name="lastModifiedBy">prudhvi.penmetsa@ibm.com</value>
-    <value name="lastModifiedDate">1752634424170</value>
+    <value name="lastModifiedBy">Prudhvi.Penmetsa@ibm.com</value>
+    <value name="lastModifiedDate">1752634874673</value>
     <value name="displayName">calculateSalesTax</value>
     <value name="description"></value>
     <array name="appList" type="record" depth="1">
@@ -222,11 +222,11 @@
         <value name="version">1.0</value>
         <record name="connection" javaclass="com.wm.util.Values">
           <value name="connectionName">Database_TaxDB</value>
-          <value name="connectionType">sagcloud</value>
+          <value name="connectionType">IBM webMethods Adapter for JDBC ExtendedConnection</value>
           <null name="description"/>
         </record>
         <value name="connectionNSName">project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_TaxDB</value>
-        <value name="connectionType">sagcloud</value>
+        <value name="connectionType">IBM webMethods Adapter for JDBC ExtendedConnection</value>
         <Boolean name="accountReferenceResolved">true</Boolean>
         <Boolean name="serviceReferenceResolved">true</Boolean>
         <array name="map" type="object" depth="1" javaclass="java.lang.Object">
@@ -354,16 +354,10 @@
       </record>
       <null name="/1/0"/>
     </record>
-    <record name="edgeServer" javaclass="com.wm.util.Values">
-      <value name="group">Default</value>
-      <value name="id">default</value>
-      <value name="name">Cloud Execution</value>
-    </record>
-    <value name="createdDate">1752634424170</value>
   </record>
   <value name="svc_in_validator_options">none</value>
   <value name="svc_out_validator_options">none</value>
-  <value name="auditoption">0</value>
+  <value name="auditoption">2</value>
   <null name="auditfields_input"/>
   <null name="auditfields_output"/>
   <record name="auditsettings" javaclass="com.wm.util.Values">
