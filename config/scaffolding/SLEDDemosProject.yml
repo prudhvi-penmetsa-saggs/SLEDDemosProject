@@ -11,19 +11,26 @@ packages:
   version: 10.3.0.0.34
   wpmServer: https://packages.webmethods.io
   wpmRegistry: licensed
+- name: WmServiceNowProvider
+  wpmServer: https://packages.webmethods.io
+  wpmRegistry: supported
 services:
-- serviceName: project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections:Database_TaxDB
-  packages:
-  - name: SLEDDemosProject
-    version: "1.0"
-  - name: WmJDBCAdapter
-    version: 10.3.0.0.34
-    wpmServer: https://packages.webmethods.io
-    wpmRegistry: licensed
 - serviceName: project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.operations.actions:getTaxRate
   packages:
   - name: SLEDDemosProject
     version: "1.0"
+  - name: WmServiceNowProvider
+    version: 12.0.0.0.14
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
+- serviceName: project.sleddemos.WmServiceNowProvider.com_webmethods_cloudstreams_servicenow_sandiego.connections:onpremservicenow
+  packages:
+  - name: SLEDDemosProject
+    version: "1.0"
+  - name: WmServiceNowProvider
+    version: 12.0.0.0.14
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
@@ -32,6 +39,8 @@ services:
   packages:
   - name: SLEDDemosProject
     version: "1.0"
+  - name: WmServiceNowProvider
+    version: 12.0.0.0.14
   - name: WmJDBCAdapter
     version: 10.3.0.0.34
     wpmServer: https://packages.webmethods.io
@@ -39,15 +48,25 @@ services:
 - serviceName: pub.math:multiplyFloats
   packages:
   - name: WmPublic
-    version: 11.1.0.0.2064
+    version: 12.1.0.0.1032
 - serviceName: pub.math:divideFloats
   packages:
   - name: WmPublic
-    version: 11.1.0.0.2064
+    version: 12.1.0.0.1032
 - serviceName: pub.math:addInts
   packages:
   - name: WmPublic
-    version: 11.1.0.0.2064
+    version: 12.1.0.0.1032
+- serviceName: project.sleddemos.integrations:dd
+  packages:
+  - name: SLEDDemosProject
+    version: "1.0"
+  - name: WmServiceNowProvider
+    version: 12.0.0.0.14
+  - name: WmJDBCAdapter
+    version: 10.3.0.0.34
+    wpmServer: https://packages.webmethods.io
+    wpmRegistry: licensed
 configurationVariables:
   ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.expireTimeout
   : "1000"
@@ -62,7 +81,7 @@ configurationVariables:
   ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.otherProperties
   : loginTimeout=60;
   ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.password
-  : "{AES}NhfBA+N8zoZHccGe72AxsA=="
+  : "{AES}aYrXC43dTWsDUHRWG5mhTA=="
   ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.driverType
   : MYSQL_DB
   ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.maximumPoolSize
@@ -89,9 +108,9 @@ configurationVariables:
   : "false"
   ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.blockingTimeout
   : "1000"
-  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.datasourceClass
-  : com.mysql.cj.jdbc.MysqlDataSource
   ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionManagerSettings.poolable
   : "false"
+  ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.datasourceClass
+  : com.mysql.cj.jdbc.MysqlDataSource
   ? artConnection.SLEDDemosProject.project.sleddemos.WmJDBCAdapter.com_wm_adapter_wmjdbc_JDBCAdapter.connections.Database_TaxDB.connectionSettings.keyStore
   : ""
